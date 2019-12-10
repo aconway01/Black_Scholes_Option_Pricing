@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Option Pricing</title>
+
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="blackscholes.css">
+
+    <script type="text/javascript" src="blackscholes.js"></script>
+
+</head>
+
+<body>
+
+    <h1>Black-Scholes Option Pricing</h1>
+
+    <form style="float: left; width: 20%;" action="javascript:Price();">
+        Share price:<br> <input id="share" type="number" step="0.01" value="23.75" />
+        <br><br>
+        Strike price:<br> <input id="strike" type="number" step="0.01" value="15.00" />
+        <br><br>
+        Dividend Yield:<br> <input id="yield" type="number" step="0.01" value="0.00" />
+        <br><br>
+        Risk-free rate:<br> <input id="rfr" type="number" step="0.01" value="0.01" />
+        <br><br>
+        Volatility:<br> <input id="vol" type="number" step="0.01" value="0.35" />
+        <br><br>
+        Time to expiration:<br> <input id="time" type="number" step="0.01" value="0.5" />
+        <br><br>
+        <label class="container">Call
+                <input type="radio" checked="checked" name="isCall" id="isCall">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">Put
+                <input type="radio" name="isCall" id="isCall">
+                <span class="checkmark"></span>
+        </label>
+        <input type="submit" class="button button2">
+    </form>
+
+
+    <p id="result">Option Price: </p>
+    <p id="delta">Delta: </p>
+    <p id="gamma">Gamma: </p>
+    <p id="theta">Theta: </p>
+    <p id="vega">Vega: </p>
+
+    <div id="chartContainer" style="float: left; height: 370px; width: 100%;"></div>
+
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+</body>
+
+</html>
